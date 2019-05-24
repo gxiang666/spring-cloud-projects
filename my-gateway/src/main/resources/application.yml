@@ -1,0 +1,26 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: mygateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+#      routes:
+#        - id: mynacos
+#          uri: lb://mynacos
+#          predicates:
+#            - Path=/admin/**
+#          filters:
+#            - StripPrefix=1
+#        - id: myfeign
+#          uri: lb://myfeign
+#          predicates:
+#            - Path=/admin/**
+#          filters:
+#            - StripPrefix=1
